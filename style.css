@@ -4,12 +4,16 @@
   font-family: 'Raleway', sans-serif;
   font-weight: 400;
   text-transform: uppercase;
-  color: #2d3c49;
+  color: #000;
   box-sizing: border-box;
 }
 
 a {
-  text-decoration: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c897db;
 }
 
 p {
@@ -29,10 +33,9 @@ h1 {
 }
 
 h2 {
-  color: #7d97ad;
+  color: #b870d4;
   font-size: 28px;
   text-transform: none;
-  margin: 0px 1% 1% 1%;
 }
 
 h3 {
@@ -40,12 +43,14 @@ h3 {
   margin: 0px;
 }
 
-h3:hover {
-  color: #02b3e4;
-}
-
 h4 {
   margin: 0px;
+}
+
+hr {
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: #c897db;
 }
 
 main {
@@ -53,11 +58,77 @@ main {
   margin: auto;
 }
 
-hr {
-  border-width: 1.5px;
-  border-style: solid;
-  border-color: #7d97ad;
-  margin: 2% 0px;
+
+/* Large Format */
+
+@media (min-width: 495px) {
+  hr {
+    margin: 2% 0px;
+  }
+  h2 {
+    margin: 0px 1% 1% 1%;
+  }
+  .logo {
+    width: 10%;
+  }
+  .description {
+    bottom: 80px;
+  }
+  .figures {
+    display: flex;
+    display: -webkit-flex;
+  }
+  .center {
+    margin: 0px 1.5%;
+  }
+  .left {
+    margin: 0px 1.5% 0px 0px;
+  }
+  .right {
+    margin: 0px 0px 0px 1.5%;
+  }
+}
+
+
+/* Transitional Format */
+
+@media (min-width: 401px) and (max-width: 494px) {
+  hr {
+    margin: 4% 0px;
+  }
+  h2 {
+    margin: 10% 1% 0px 0px;
+  }
+  .splash {
+    height: 200px;
+  }
+  .logo {
+    width: 25%;
+  }
+  .description {
+    bottom: 100px;
+  }
+}
+
+
+/* Small Format */
+
+@media (max-width: 400px) {
+  hr {
+    margin: 4% 0px;
+  }
+  h2 {
+    margin: 10% 1% 0px 0px;
+  }
+  .splash {
+    height: 160px;
+  }
+  .logo {
+    width: 25%;
+  }
+  .description {
+    bottom: 100px;
+  }
 }
 
 
@@ -72,16 +143,16 @@ header {
   align-items: flex-start;
 }
 
-.logo {
-  width: 10%;
-}
-
 .header-text {
   width: 90%;
 }
 
 
 /* Splash */
+
+.splash {
+  max-height: 400px;
+}
 
 .splash:hover .splash-image {
   opacity: .3;
@@ -91,14 +162,14 @@ header {
   visibility: visible;
 }
 
-.splash .description {
+.description {
+  padding: 1%;
   position: relative;
-  bottom: 30px;
   left: 0px;
   text-transform: none;
   text-align: right;
-  color: #000;
-  background-color: #ccc;
+  color: #fff;
+  background-color: #c897db;
   visibility: hidden;
 }
 
@@ -111,27 +182,8 @@ figure {
   text-align: center;
 }
 
-.center {
-  margin: 0px 1.5%;
-}
-
-.left {
-  margin: 0px 1.5% 0px 0px;
-}
-
-.right {
-  margin: 0px 0px 0px 1.5%;
-}
-
 figcaption {
   text-transform: none;
   font-weight: 200;
   font-size: 13px;
-}
-
-.figures {
-  display: flex;
-  display: -webkit-flex;
-  justify-content: flex-start;
-  -webkit-justify-content: flex-start;
 }
