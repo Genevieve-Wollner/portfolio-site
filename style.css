@@ -12,6 +12,10 @@ a {
   text-decoration: inherit;
 }
 
+p {
+  margin: 0px;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -28,7 +32,7 @@ h2 {
   color: #7d97ad;
   font-size: 28px;
   text-transform: none;
-  margin: 1%;
+  margin: 0px 1% 1% 1%;
 }
 
 h3 {
@@ -79,8 +83,23 @@ header {
 
 /* Splash */
 
-.splash {
-  margin: 2% 0px;
+.splash:hover .splash-image {
+  opacity: .3;
+}
+
+.splash:hover .description {
+  visibility: visible;
+}
+
+.splash .description {
+  position: relative;
+  bottom: 30px;
+  left: 0px;
+  text-transform: none;
+  text-align: right;
+  color: #000;
+  background-color: #ccc;
+  visibility: hidden;
 }
 
 
